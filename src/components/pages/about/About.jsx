@@ -4,7 +4,9 @@ import AboutUs1 from "../../../assets/images/aboutUs2.png";
 import AboutUs from "../../../assets/images/aboutUs1.png";
 
 import Img from "../../../assets/images/about.png";
-import "./About.scss";
+
+import "./about.scss"; // туура
+
 const About = () => {
   return (
     <div id="about">
