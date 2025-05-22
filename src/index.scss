@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+botton {
+  cursor: pointer;
+  border: none;
+}
+input {
+  cursor: pointer;
+  border: none;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  footer {
+    margin-top: auto;
+  }
+}
