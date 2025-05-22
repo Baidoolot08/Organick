@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import ProductCard from "../../ui/productCard/productCard/";
+import ProductCard from "../../ui/productCard/ProductCard";
 import "./Category.scss";
 import { ProductContext } from "../../../context/context";
 const Category = () => {
