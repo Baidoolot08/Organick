@@ -1,6 +1,27 @@
 #contact {
   padding: 90px 0;
 }
+.about__bg {
+  position: relative;
+  margin-bottom: 60px;
+  &--img {
+    width: 100%;
+    object-fit: contain;
+  }
+  &--title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: 700;
+    color: rgba(39, 76, 91, 1);
+  }
+}
 .contact-form {
   width: 100%;
   max-width: 900px;

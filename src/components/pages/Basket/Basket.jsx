@@ -14,8 +14,6 @@ const Basket = () => {
     0
   );
 
-  //7734183893:AAGnnxwYUcZyvKaXfn7Iu7hMvNVwyft-waI
-
   return (
     <div id="Basket">
       <div className="container">

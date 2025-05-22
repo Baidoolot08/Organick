@@ -8,6 +8,8 @@ import Header from "./components/Layout/Header/header";
 import Basket from "./components/pages/Basket/Basket";
 import Category from "./components/pages/Category/Category";
 import Contact from "./components/pages/Contact/Contact";
+import Subscribe from "./components/Layout/Subscribe/Subscribe";
+import About from "./components/pages/about/About";
 
 function App() {
   const routes = [
@@ -41,6 +43,11 @@ function App() {
       link: "/contact",
       element: <Contact />,
     },
+    {
+      id: 7,
+      link: "/about",
+      element: <About />,
+    },
   ];
 
   return (
@@ -51,6 +58,7 @@ function App() {
           <Route path={el.link} element={el.element} key={el.id} />
         ))}
       </Routes>
+      <Subscribe />
       <Footer />
     </div>
   );

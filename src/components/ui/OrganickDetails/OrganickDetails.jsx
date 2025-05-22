@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { ProductContext } from "../../../context/context";
 import "./OrganickDetails.scss";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-
+import Img from "../../../assets/images/BannerDetails.jpg";
 const OrganickDetails = () => {
   const { dataProduct } = useContext(ProductContext);
   const { detailsId } = useParams();
@@ -13,6 +13,10 @@ const OrganickDetails = () => {
 
   return (
     <div id="OrganickDetails">
+      <div className="about__bg">
+        <img src={Img} className="about__bg--img " alt="img" />
+        <h1 className="about__bg--title">Shop Single</h1>
+      </div>
       <div className="container">
         <div className="product-image">
           <span className="category-tag">{product.productCategory}</span>

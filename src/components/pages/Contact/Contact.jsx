@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Contact.scss";
-
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Img from "../../../assets/images/ComtactBanner.png";
 const Contact = () => {
   const [fullname, setFullName] = useState("");
   const [yourEmail, setYourEmail] = useState("");
@@ -20,7 +22,12 @@ const Contact = () => {
       !subject.trim() ||
       !message.trim()
     ) {
-      alert("Пожалуйста, заполните все поля!");
+      toast.warn("Пожалуйста, заполните все поля!", {
+        position: "bottom-right",
+        autoClose: 4000,
+        theme: "colored",
+        transition: Bounce,
+      });
       return;
     }
 
@@ -48,13 +55,22 @@ const Contact = () => {
     axios
       .post(api_url, userData)
       .then(() => {
-        alert("Сообщение успешно отправлено!");
+        toast.success("Сообщение успешно отправлено!", {
+          position: "bottom-right",
+          autoClose: 4000,
+          theme: "colored",
+          transition: Bounce,
+        });
         setModal(false);
         clear();
       })
       .catch((err) => {
-        alert("Ошибка при отправке!");
-        console.error(err);
+        toast.error("Ошибка при отправке!", {
+          position: "bottom-right",
+          autoClose: 4000,
+          theme: "colored",
+          transition: Bounce,
+        });
       });
   };
 
@@ -68,6 +84,10 @@ const Contact = () => {
 
   return (
     <div id="contact">
+      <div className="about__bg">
+        <img src={Img} className="about__bg--img " alt="img" />
+        <h1 className="about__bg--title">Contact Us</h1>
+      </div>
       <div className="contact-form">
         <form onSubmit={handleFormSubmit}>
           <div className="form-group">
@@ -142,6 +162,7 @@ const Contact = () => {
             </div>
           </div>
         )}
+        <ToastContainer />
       </div>
     </div>
   );
