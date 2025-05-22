@@ -5,7 +5,7 @@ import AboutUs from "../../../assets/images/aboutUs1.png";
 
 import Img from "../../../assets/images/about.png";
 
-import "./about.scss"; // туура
+import "./About.scss";
 
 const About = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import { FiPlusCircle } from "react-icons/fi";
@@ -15,20 +15,12 @@ const ProductCard = ({ id, category, image, name, price, rating }) => {
       toast.info("🛒 Уже в корзине!", {
         position: "top-center",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
         theme: "colored",
       });
     } else if (Basket.length === 5) {
       toast.error("🚫 Корзина заполнена!", {
         position: "top-center",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
         theme: "colored",
       });
     } else {
@@ -39,10 +31,6 @@ const ProductCard = ({ id, category, image, name, price, rating }) => {
       toast.success("✅ Добавлен в корзину!", {
         position: "top-center",
         autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
         theme: "colored",
       });
     }
